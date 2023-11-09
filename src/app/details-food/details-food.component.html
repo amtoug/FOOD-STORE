@@ -1,0 +1,20 @@
+<div class="item" (click)="Navigate(Food.id)" *ngIf="Food.id">
+    <img [src]="Food.imageUrl" alt="Food">
+    <div class="item_details">
+        <div class="item_details--name">{{Food.name}}</div>
+        <div [class.Notfavo]="!Food.favorite" class="item_details--favoriteIcon">❤</div>
+        <div class="item_details--stars" >
+            <app-start-rating Etoils="{{Food.stars}}"></app-start-rating>
+        </div>
+        <small class="item_details--origines">
+            <span *ngFor="let origin of Food.origins">{{ origin}} </span>
+        </small>
+        <small class="item_details--time">
+            <span class="item_details--time_Icon">🕒</span>
+            {{Food.cookTime}}
+        </small>
+        <div class="item_details--price">
+            {{Food.price | currency}}
+        </div>
+    </div>
+</div>

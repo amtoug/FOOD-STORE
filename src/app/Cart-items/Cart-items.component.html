@@ -1,0 +1,27 @@
+<content *ngIf="SerCart.FoodsSelected.length>0" class="content1">
+  <section>
+    <div class="item" *ngFor="let Food of SerCart.FoodsSelected">
+      <img [src]="Food.imageUrl" (load)="SerCart.Price(Food.id,Food.price,1)"/>
+      <p>{{Food.name}}</p>
+      <select #Qte (change)="SerCart.Price(Food.id,Food.price,+Qte.value)">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+      </select>
+      <!-- <input type="number" #Qte (keyup)="Price(Food.id,Food.price,+Qte.value)" [ngModel]="1" /> -->
+      <div [id]="Food.id">{{SerCart.Price(Food.id,Food.price,+Qte.value) | currency}}</div>
+      <input type="button" value="Remove" (click)="SerCart.Remove(Food.id)"/>
+    </div>
+  </section>
+  <div class="item_Total">
+    <div class="checkout">
+      <p><span>Count:</span>{{SerCart.FoodsSelected.length}}</p>
+      <p><span>Total:</span>{{SerCart.PriceTotal() |currency}}</p>
+    </div>
+  </div>
+</content>
+<app-not-found [EmptyCart]="SerCart.Empty"></app-not-found>

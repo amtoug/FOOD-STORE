@@ -1,0 +1,15 @@
+article
+{
+    text-align: center;
+    font-size: 2rem;
+}
+button{
+    background-color: var(--DefaultColor);
+    color: white;
+    border: 0;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 20px;
+    width: 150px;
+    cursor: pointer;
+}

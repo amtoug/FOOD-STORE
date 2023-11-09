@@ -1,0 +1,8 @@
+<div class="tags">
+    <ul *ngIf="!TagsFoodPage">
+        <li *ngFor="let Tag of Tags" (click)="Navigate(Tag.Tag)">{{Tag.Tag}}({{Tag.Count}})</li>
+    </ul>
+    <ul *ngIf="TagsFoodPage">
+        <li *ngFor="let Tag of TagsFoodPage" (click)="Navigate(Tag)">{{Tag}}</li>
+    </ul>
+ </div>

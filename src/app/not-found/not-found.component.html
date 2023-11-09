@@ -1,0 +1,14 @@
+<article *ngIf="NotFound">
+    <h1>Not Found</h1>
+   <button routerLink="/FoodMenu">reset Search</button>
+</article>
+
+<article *ngIf="EmptyCart">
+    <h1>Carte Liste is Empty!</h1>
+    <button routerLink="/FoodMenu">Go to Home Page</button>
+</article>
+
+<article *ngIf="ProdactNotFound">
+    <h1>Prodact Not Found!</h1>
+    <button routerLink="/FoodMenu">Go to Home Page</button>
+</article>

@@ -1,0 +1,12 @@
+#article1{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
+    justify-content: center;
+}
+app-tags{
+    text-align: center;
+}
+

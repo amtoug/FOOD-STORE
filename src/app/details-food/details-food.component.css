@@ -1,0 +1,56 @@
+.item_details--favoriteIcon{
+    float: right;
+    transform: scale(1.5);
+    margin: -5px;
+    padding-right: 10px;
+    color: #ef3434;
+}
+
+
+.item_details--name{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.item_details--time{
+    float: right;
+}
+
+.item_details--price{
+    color: #414141;
+    margin: 10px auto;
+}
+
+.item_details--origines{
+    color: gray;
+}
+
+.item{
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 5px 10px;
+    color: #f86161;
+    height: 380px;
+    /* background-color: rgb(255, 251, 251); */
+    border-radius: 10px;
+    border: 2px solid whitesmoke;
+}
+
+div.item .item_details{
+    margin: 5px 10px;
+}
+
+.Notfavo{
+    color: darkgrey;
+}
+
+div.item img{
+    border-radius: 10px 10px 0 0;
+    width: 280px;
+    /* box-shadow: 1px 2px 5px; */
+}
+
+div.item img:hover
+{
+    opacity: .8;
+}

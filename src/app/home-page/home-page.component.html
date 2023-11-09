@@ -1,0 +1,8 @@
+<app-search-food></app-search-food>
+<app-tags></app-tags>
+<article  id="article1">
+   <section  *ngFor="let Food of Foods">
+      <app-details-food [Food]="Food" ></app-details-food>
+   </section>
+</article>
+<app-not-found [NotFound]="NotFound"></app-not-found>

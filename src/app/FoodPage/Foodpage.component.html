@@ -1,0 +1,24 @@
+<article *ngIf="!ProdactNotFound">
+    <div class="image">
+        <img [src]="Food.imageUrl" alt="{{Food.name}}">
+    </div>
+    <div class="item_details">
+        <span class="item_details--name">{{Food.name}}</span>
+        <span [class.favo]="Food.favorite" class="item_details--favoriteIcon">❤</span><br>
+        <app-start-rating Etoils="{{Food.stars}}" class="item_details--stars"></app-start-rating>
+        <p class="item_details--origines">
+            <span *ngFor="let origin of Food.origins" class="origin">{{origin}} </span>
+        </p>
+        <app-tags [TagsFoodPage]="Food.tags"></app-tags>
+        <small class="item_details--time">
+            Time to cook about 
+            <span class="cookTime">{{Food.cookTime}}</span>
+            min
+        </small>
+        <p class="item_details--price">
+            {{Food.price | currency}}
+        </p>
+        <button class="item_details--BtnAddToCart" (click)="Navigate(Food.id)">Add To Cart</button>
+    </div>
+</article>
+<app-not-found [ProdactNotFound]="ProdactNotFound"></app-not-found>

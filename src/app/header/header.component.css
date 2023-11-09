@@ -1,0 +1,44 @@
+header
+{
+    margin: 0;
+    border-bottom: 1px solid var(--DefaultColor);
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color:#f86161;
+    font-size: 1.5rem;
+    padding: 14px;
+}
+
+a:hover{
+    background-color: #f86161;
+    color: #FFF;
+}
+.Logo
+{
+    font-weight: bold;
+    letter-spacing: .5ch;
+}
+
+nav ul li a {
+    margin: 0;
+}
+nav
+{
+    margin: 0;
+}
+ul{
+    margin-bottom: 13px;
+}
