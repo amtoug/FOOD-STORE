@@ -87,10 +87,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "FOOD:build:production"
+              "buildTarget": "FOOD:build:production"
             },
             "development": {
-              "browserTarget": "FOOD:build:development"
+              "buildTarget": "FOOD:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,7 +98,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FOOD:build"
+            "buildTarget": "FOOD:build"
           }
         }
       }
